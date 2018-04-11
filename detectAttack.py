@@ -8,7 +8,7 @@ from sklearn.metrics import confusion_matrix, zero_one_loss
 from sklearn.model_selection import train_test_split
 
 # Must declare data_dir as the directory of training and test files
-data_dir="../../datasets/KDD-CUP-99/"
+data_dir="./datasets/KDD-CUP-99/"
 raw_data_filename = data_dir + "kddcup.data"
 
 print "Loading raw data"
