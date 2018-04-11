@@ -35,7 +35,8 @@ labels= numpy.array(labels).ravel() # this becomes an 'horizontal' array
 # Separate data in train set and test set
 df= pd.DataFrame(features)
 # create training and testing vars
-# Note: train_size + test_size < 1.0 as we are subsampling
+# Note: train_size + test_size < 1.0 means we are subsampling
+# Use small numbers for slow classifiers, as KNN, Radius, SVC,...
 X_train, X_test, y_train, y_test = train_test_split(df, labels, train_size=0.8, test_size=0.2)
 print "X_train, y_train:", X_train.shape, y_train.shape
 print "X_test, y_test:", X_test.shape, y_test.shape
