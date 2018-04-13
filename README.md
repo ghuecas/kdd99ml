@@ -3,6 +3,8 @@ Demo of SciKit ML algorithms using the kdd99 dataset
 
 Based on Charanpal Dhanjal work https://gist.github.com/charanpald/c216800e25480ee838e8
 
+The dataset used is the KDD Cup 99 dataset http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
+
 To download dataset:
 1) Download KDD Cup 99 dataset with:
    wget http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data.gz
