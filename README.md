@@ -20,7 +20,7 @@ To download dataset:
    raw_data_filename = data_dir + "kddcup.data"
    change by
    raw_data_filename = data_dir + "kddcup.data_10_percent"
-2) run the code with
+2) Run the code with
    python detectAttack.py
-3) play with other classifiers, commenting RandomForest creation line
+3) Play with other classifiers, commenting RandomForest creation line
    (around line 45) and uncomment DecisionTreeClassifier.
