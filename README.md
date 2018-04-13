@@ -7,8 +7,11 @@ The dataset used is the KDD Cup 99 dataset http://kdd.ics.uci.edu/databases/kddc
 
 To download dataset:
 1) Download KDD Cup 99 dataset with:
+
    wget http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data.gz
+
    or
+
    wget http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data_10_percent.gz
 
    and uncompress it. The first one occupies about 740MBytes, the second one
