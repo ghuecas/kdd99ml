@@ -28,8 +28,9 @@ features= raw_data.iloc[:,:raw_data.shape[1]-1]
 labels= raw_data.iloc[:,raw_data.shape[1]-1:]
 
 # convert them into numpy arrays
-features= numpy.array(features)
-labels= numpy.array(labels).ravel() # this becomes an 'horizontal' array
+#features= numpy.array(features)
+#labels= numpy.array(labels).ravel() # this becomes an 'horizontal' array
+labels= labels.values.ravel() # this becomes a 'horizontal' array
 
 # TODO: get features names and target name
 
