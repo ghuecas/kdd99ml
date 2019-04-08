@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 #data_dir="./datasets/KDD-CUP-99/"
 data_dir="./"
 raw_data_filename = data_dir + "kddcup.data"
+#raw_data_filename = data_dir + "kddcup.data_10_percent"
 
 print ("Loading raw data")
 
