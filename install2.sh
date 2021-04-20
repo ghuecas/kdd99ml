@@ -11,7 +11,7 @@ sudo apt-get -y install git
 sudo apt-get -y install wget
 
 #
-# Download and install Anaconda 3
+# Download and install Anaconda 2
 wget https://repo.continuum.io/archive/Anaconda2-5.1.0-Linux-x86_64.sh
 sudo sh Anaconda2-5.1.0-Linux-x86_64.sh -b
 
@@ -27,10 +27,14 @@ wget http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data_10_percent.gz
 gunzip kddcup.*.gz
 
 #
-# Download and execute the ML script
+# Download the pandas and sklearn packages
+anaconda3/bin/pip install pandas
+anaconda3/bin/pip install sklearn
+
+#
+# Download the ML script
 git clone https://github.com/ghuecas/kdd99ml
 
-
-source ~/.bashrc
-./anaconda2/bin/python kdd99ml/detectAttack.py
+# Ready to execute the detection script, print the command
+echo "execute ./anaconda3/bin/python kdd99ml/detectAttack.py"
 

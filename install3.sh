@@ -27,8 +27,14 @@ wget http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data_10_percent.gz
 gunzip kddcup.*.gz
 
 #
+# Download the pandas and sklearn packages
+anaconda3/bin/pip install pandas
+anaconda3/bin/pip install sklearn
+
+#
 # Download the ML script
 git clone https://github.com/ghuecas/kdd99ml
 
-./anaconda3/bin/python kdd99ml/detectAttack.py
+# Ready to execute the detection script, print the command
+echo "execute ./anaconda3/bin/python kdd99ml/detectAttack.py"
 
