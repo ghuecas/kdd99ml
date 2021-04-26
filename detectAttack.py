@@ -10,8 +10,8 @@ from sklearn.model_selection import train_test_split
 # Must declare data_dir as the directory of training and test files
 #data_dir="./datasets/KDD-CUP-99/"
 data_dir="./"
-raw_data_filename = data_dir + "kddcup.data"
-#raw_data_filename = data_dir + "kddcup.data_10_percent"
+#raw_data_filename = data_dir + "kddcup.data"
+raw_data_filename = data_dir + "kddcup.data_10_percent"
 
 print ("Loading raw data")
 
@@ -47,8 +47,8 @@ print ("X_test, y_test:", X_test.shape, y_test.shape)
 
 # Training, choose model by commenting/uncommenting clf=
 print ("Training model")
-clf= RandomForestClassifier(n_jobs=-1, random_state=3, n_estimators=102)#, max_features=0.8, min_samples_leaf=3, n_estimators=500, min_samples_split=3, random_state=10, verbose=1)
-#clf = DecisionTreeClassifier(criterion='gini', splitter='best', max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, class_weight=None, presort=False)
+#clf= RandomForestClassifier(n_jobs=-1, random_state=3, n_estimators=102)#, max_features=0.8, min_samples_leaf=3, n_estimators=500, min_samples_split=3, random_state=10, verbose=1)
+clf = DecisionTreeClassifier(criterion='gini', splitter='best', max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=None, random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, class_weight=None, presort=False)
 
 trained_model= clf.fit(X_train, y_train)
 
@@ -65,3 +65,13 @@ error = zero_one_loss(y_test, y_pred)
 print ("Confusion matrix:\n", results)
 print ("Error: ", error)
 
+# NUEVO: Calcular precision, recall y F1
+from sklearn.metrics import precision_score
+precision = precision_score(y_test, y_pred, average='micro')
+from sklearn.metrics import recall_score
+recall = recall_score(y_test, y_pred, average='micro')
+from sklearn.metrics import f1_score
+f1 = f1_score(y_test, y_pred, average='micro')
+print('precision_score: ', precision)
+print('recall_score:', recall)
+print('f1_score: ', f1)
