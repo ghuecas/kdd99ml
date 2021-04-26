@@ -1,5 +1,8 @@
 #using ubuntu t2.xlarge 32G storage  ( 2 minutes execution)
 
+#uncomment following line if you are already root
+#alias sudo=
+
 #
 # UPDATE the system
 sudo apt-get -y update
@@ -32,7 +35,7 @@ anaconda3/bin/pip install pandas
 anaconda3/bin/pip install sklearn
 
 #
-# Download the ML script
+# Download the ML script for attack detection
 git clone https://github.com/ghuecas/kdd99ml
 
 # Ready to execute the detection script, print the command
